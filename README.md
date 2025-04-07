@@ -6,63 +6,29 @@ object Profile {
     val role = "Software Developer"
     
     object AboutMe {
-        val education = "Pursuing a Bachelor's degree in Computer Science"
-        val interests = listOf(
-            "Political Enthusiast",
-            "Competitive Swimming"
-        )
-        
-        fun introduction() = """
-            I'm passionate about software development and I am constantly learning more and expanding my knowledge.
-            When I'm not coding, you can find me absorbed in politics, swimming laps in the pool, or gaming!
-        """.trimIndent()
+        val education = "B.S. Computer Science (in progress)"
+        val interests = listOf("Politics", "Swimming", "Gaming")
+        val bio = "Passionate dev always learning. I code, swim, and follow politics!"
     }
     
-    object CurrentlyLearning {
-        val technologies = setOf(
-            Technology("Rust", "Systems Programming"),
-            Technology("OpenCV", "Computer Vision"),
-            Technology("Machine Learning", "AI")
-        )
-        
-        fun display() = technologies.joinToString("\n") { "- ${it.name}: ${it.category}" }
-    }
-    
-    object Skills {
-        val languages = listOf("Java", "Kotlin", "Python", "JS", "TS")
-        val frontend = listOf("React", "Tailwind", "Flutter", "Android")
-        val backend = listOf("Node", "Kafka", "Spring Boot")
-        val databases = listOf("PostgreSQL", "MongoDB", "Redis")
-        val devOps = listOf("Grafana", "Docker", "Kubernetes")
-        
-        fun formatSkillSection(title: String, skills: List<String>) = 
-            "$title: ${skills.joinToString(", ")}"
-            
-        fun getAllSkills() = """
-            ${formatSkillSection("Languages", languages)}
-            ${formatSkillSection("Frontend", frontend)}
-            ${formatSkillSection("Backend", backend)}
-            ${formatSkillSection("Databases", databases)}
-            ${formatSkillSection("DevOps", devOps)}
-        """.trimIndent()
-    }
+    val learning = listOf("Rust", "OpenCV", "ML/AI")
+    val skills = mapOf(
+        "Languages" to listOf("Java", "Kotlin", "Python", "JS", "TS"),
+        "Frontend" to listOf("React", "Tailwind", "Flutter", "Android"),
+        "Backend" to listOf("Node", "Kafka", "Spring Boot"),
+        "DBs" to listOf("PostgreSQL", "MongoDB", "Redis"),
+        "DevOps" to listOf("Grafana", "Docker", "K8s")
+    )
     
     fun printResume() {
         println("# $name - $role")
-        println("\n## About Me")
-        println(AboutMe.introduction())
-        println("\n## Currently Learning")
-        println(CurrentlyLearning.display())
-        println("\n## Skills")
-        println(Skills.getAllSkills())
+        println("\n${AboutMe.bio}\n${AboutMe.education}")
+        println("\nLearning: ${learning.joinToString()}")
+        println("\nSkills:\n${skills.map { "- ${it.key}: ${it.value.joinToString()}"}.joinToString("\n")}")
     }
 }
 
-data class Technology(val name: String, val category: String)
-
-fun main() {
-    Profile.printResume()
-}
+fun main() { Profile.printResume() }
 ```
 
 ## 📫 Connect With Me
