@@ -13,7 +13,7 @@ object Profile {
     
     val learning = listOf("Rust", "OpenCV", "ML/AI")
     val skills = mapOf(
-        "Languages" to listOf("Java", "Kotlin", "Python", "JS", "TS"),
+        "Languages" to listOf("Java", "Kotlin", "Python", "JS", "TS", "C#", "Rust"),
         "Frontend" to listOf("React", "Tailwind", "Flutter", "Android"),
         "Backend" to listOf("Node", "Kafka", "Spring Boot"),
         "DBs" to listOf("PostgreSQL", "MongoDB", "Redis"),
