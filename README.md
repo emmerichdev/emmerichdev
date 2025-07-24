@@ -3,7 +3,7 @@
 ```kotlin
 object Profile {
     val name = "Emmerich"
-    val role = "Software Developer"
+    val role = "Backend Systems Developer"
     
     object AboutMe {
         val education = "B.S. Computer Science (in progress)"
