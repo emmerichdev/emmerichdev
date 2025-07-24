@@ -11,13 +11,13 @@ object Profile {
         val bio = "Passionate dev always learning. I code, swim, and follow politics!"
     }
     
-    val learning = listOf("Rust", "OpenCV", "ML/AI")
+    val learning = listOf("ML/AI", "Python")
     val skills = mapOf(
-        "Languages" to listOf("Java", "Kotlin", "Python", "JS", "TS", "C#", "Rust"),
-        "Frontend" to listOf("React", "Tailwind", "Flutter", "Android"),
-        "Backend" to listOf("Node", "Kafka", "Spring Boot"),
-        "DBs" to listOf("PostgreSQL", "MongoDB", "Redis"),
-        "DevOps" to listOf("Grafana", "Docker", "K8s")
+        "Languages" to listOf("Java", "Kotlin", "C#","Rust"),
+        "Frontend" to listOf("React", "Tailwind", "Android", "IOS"),
+        "Backend" to listOf("Node", "Kafka", "Spring"),
+        "DBs" to listOf("Most SQL databases", "MongoDB", "Redis"),
+        "DevOps" to listOf("Grafana", "Docker", "K8s", "Git", "Actions", "CI/CD")
     )
     
     fun printResume() {
